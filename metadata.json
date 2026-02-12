@@ -1,0 +1,8 @@
+{
+  "name": "Copy of NeonFlow Agency Landing",
+  "description": "A high-conversion agency landing page with glassmorphism, dark theme, and neon accents focused on web design, hosting, and social media services.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
