@@ -41,5 +41,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/ # Uploads everything inside 'dist'
-        server-dir: / # Tells Hostinger exactly where to land it
+        server-dir: /public_html/ # Tells Hostinger exactly where to land it
         dangerous-clean-slate: false # Extra protection to not wipe files randomly
