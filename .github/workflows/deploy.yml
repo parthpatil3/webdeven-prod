@@ -1,9 +1,7 @@
 name: Deploy Webdeven V2 to Hostinger
 
 on:
-  push:
-    branches:
-      - main # Automatically deploy when code is pushed to main
+  workflow_dispatch: # Permanently changed to manual so it NEVER overwrites your Hostinger folders automatically again
 
 jobs:
   build-and-deploy:
