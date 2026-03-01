@@ -1,7 +1,9 @@
 name: Deploy Webdeven V2 to Hostinger
 
 on:
-  workflow_dispatch: # Changed from push to manual trigger only so it stops auto-deploying
+  push:
+    branches:
+      - main # Automatically deploy when code is pushed to main
 
 jobs:
   build-and-deploy:
@@ -39,5 +41,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/ # Uploads everything inside 'dist'
-        server-dir: / # Tells Hostinger exactly where to land it
+        server-dir: /domains/webdeven.com/public_html/ # Explicitly lands files in the exact Hostinger web root
         dangerous-clean-slate: false # Extra protection to not wipe files randomly
