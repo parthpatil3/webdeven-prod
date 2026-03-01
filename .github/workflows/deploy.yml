@@ -20,9 +20,9 @@ jobs:
       with:
         node-version: 20
 
-    # Step 3: Install all your NPM packages
+    # Step 3: Install all your NPM packages (ignoring React 19 legacy peer conflicts)
     - name: Install Dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
 
     # Step 4: Run the Production Build (Generates the "dist" folder)
     - name: Build Application
