@@ -1,9 +1,7 @@
 name: Deploy Webdeven V2 to Hostinger
 
 on:
-  push:
-    branches:
-      - main # This tells GitHub to ONLY run this script when code hits the 'main' branch
+  workflow_dispatch: # Changed from push to manual trigger only so it stops auto-deploying
 
 jobs:
   build-and-deploy:
