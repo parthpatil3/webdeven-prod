@@ -169,7 +169,7 @@ const Hero = () => {
                         transition={{ delay: 0.6, duration: 0.8, ease: "circOut" }}
                         className="text-muted-foreground text-base md:text-xl lg:text-2xl font-normal tracking-wide leading-relaxed text-center"
                     >
-                        Speed-Optimized and Engineered for Core Web Vitals — Turning your Website into a <span className="text-foreground font-medium">Revenue Asset</span>.
+                        Speed-Optimized and Engineered for Core Web Vitals <span className="text-primary text-xs ml-2 align-top">[Live Deploy Active ✅]</span> <br /> Turning your Website into a <span className="text-foreground font-medium">Revenue Asset</span>.
                     </m.p>
                 </div>
 
