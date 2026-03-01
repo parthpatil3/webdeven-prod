@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-primary: #B4FE30;
+  --color-dark: #050505;
+  --color-dark-card: #0c0c0c;
+  --color-border-gray: rgba(255, 255, 255, 0.1);
+
+  /* Add missing variables for Shadcn/UI classes used in components */
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+  --color-card: #0a0a0a;
+  --color-card-foreground: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: rgba(255, 255, 255, 0.15);
+  --color-muted-foreground: #9ca3af;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-dark);
+    color: white;
+    font-family: var(--font-inter);
+    /* Subtle texture instead of heavy green fog */
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(180, 254, 48, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(180, 254, 48, 0.03) 0%, transparent 40%);
+  }
+}
+
+@layer utilities {
+  .fade-mask-bottom {
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-pan {
+    animation: pan 20s linear infinite;
+  }
+
+  .animate-float-unified {
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .animate-float-unified-reverse {
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  .animate-spin-unified {
+    animation: spin 30s linear infinite;
+  }
+
+  .animate-pulse-unified {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Extreme slow spin utility */
+  .animate-spin-superslow {
+    animation: spin 60s linear infinite;
+  }
+
+  @keyframes pan {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      top: -50%;
+    }
+
+    100% {
+      top: 150%;
+    }
+  }
+
+  .animate-scan-slow {
+    animation: scan 8s linear infinite;
+  }
+}
+
+
+/* Subtle Cross-Grid Background */
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.cross-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(180, 254, 48, 0.15) 0%, transparent 70%);
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, rgba(180, 254, 48, 0.05) 0%, rgba(5, 5, 5, 0) 100%);
+}
+
+.geometric-pattern {
+  background-image: radial-gradient(rgba(180, 254, 48, 0.1) 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+
+/* Custom Rounded Corners per prompt (12-16px) */
+.rounded-custom {
+  border-radius: 14px;
+}
+
+.rounded-pill {
+  border-radius: 9999px;
+}
+
+/* Animation for smooth scrolling and hover */
+.transition-standard {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

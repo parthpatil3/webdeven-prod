@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { 
-  Palette, 
-  Monitor, 
+import {
+  Palette,
+  Monitor,
   Play,
   ArrowRight
 } from 'lucide-react';
@@ -11,22 +11,22 @@ import { Service, Project, Testimonial, FAQItem } from './types';
 export const SERVICES: Service[] = [
   {
     id: 'identity',
-    title: 'Brand Identity & Logo Design',
-    description: 'Create cohesive, memorable brand identities that make you stand out.',
-    icon: <Palette className="w-6 h-6 text-primary" />,
-    tags: []
-  },
-  {
-    id: 'web-ui',
-    title: 'Web UI/UX Design',
-    description: 'Design intuitive, conversion-driven websites your customers will love.',
+    title: 'High-Performance Websites',
+    description: 'Built for speed, SEO visibility, and conversions — turning traffic into measurable revenue.',
     icon: <Monitor className="w-6 h-6 text-primary" />,
     tags: []
   },
   {
+    id: 'web-ui',
+    title: 'Brand Authority & Engagement',
+    description: 'Strategic social systems built to expand reach, strengthen authority, and convert attention into trust.',
+    icon: <Palette className="w-6 h-6 text-primary" />,
+    tags: []
+  },
+  {
     id: 'video',
-    title: 'Video Editing & Logo Animation',
-    description: 'Bring your brand to life with engaging visuals and animations.',
+    title: 'Performance Hosting',
+    description: 'Secure, managed hosting with proactive updates and monitoring — ensuring speed, stability, and uptime.',
     icon: <Play className="w-6 h-6 text-primary" />,
     tags: []
   }
@@ -35,62 +35,66 @@ export const SERVICES: Service[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'NovaTech - Brand Identify',
-    category: 'Identity',
-    description: 'Created a bold, innovative brand identity, improving recognition by 45%.',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800',
-    tags: ['Identity', 'Branding', 'Portfolio', 'Design', 'And more...']
+    title: 'Vivah By Raka',
+    category: 'WEBSITE DEVELOPMENT',
+    description: 'Premium wedding decor website built for visual storytelling and inquiry generation. The experience is fast, search-optimized, and structured to turn visitors into qualified leads.',
+    image: '/vbr.webp',
+    tags: ['WordPress', 'SEO Optimization', 'Lead Generation'],
+    link: 'https://vivahbyraka.com'
   },
   {
     id: '2',
-    title: 'LuxeHome - UI/UX for E-commerce',
-    category: 'Design',
-    description: 'Created a bold, innovative brand identity, improving recognition by 45%.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    tags: ['UI/UX', 'Design', 'E-commerce', 'Landing page', 'And more...']
+    title: 'TheDegreeWala.com',
+    category: 'WEBSITE DEVELOPMENT',
+    description: 'Education-focused website structured to guide visitors clearly from information to inquiry. Built with strong search visibility and conversion-focused page architecture to capture quality leads.',
+    image: '/tdw.webp',
+    tags: ['WordPress', 'SEO Pages', 'Conversion Funnels'],
+    link: 'https://thedegreewala.com'
   },
   {
     id: '3',
-    title: 'ZenoFit - Logo Animation',
-    category: 'Animation',
-    description: 'Created a bold, innovative brand identity, improving recognition by 45%.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    tags: ['Animation', 'Motion Graphics', 'Branding', 'Visual Identify', 'And more...']
+    title: 'SocialFabric',
+    category: 'WEBSITE DEVELOPMENT',
+    description: 'Modern brand website created to showcase work, build trust, and drive inquiries. Designed with performance, clarity, and strategic positioning at its core.',
+    image: '/sf.webp',
+    tags: ['UI/UX Design', 'Performance Optimization', 'Brand Positioning'],
+    link: 'https://socialfabric327.com'
   },
   {
     id: '4',
-    title: 'EcoBloom - For Rebranding',
-    category: 'Rebrand',
-    description: 'Created a bold, innovative brand identity, improving recognition by 45%.',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800',
-    tags: ['Rebrand', 'Branding', 'Marketing', 'Visual Identify', 'And more...']
+    title: 'KS Engineering Services',
+    category: 'WEBSITE DEVELOPMENT',
+    description: 'Professional service website developed to establish credibility and generate consistent inquiries. Structured service pages and clear calls-to-action support both search visibility and lead conversion.',
+    image: '/kses.webp',
+    tags: ['Service Website', 'SEO Foundation', 'Lead Conversion'],
+    link: 'https://ksengineeringservices.in'
   }
 ];
 
 export const FAQS: FAQItem[] = [
   {
     id: 'q1',
-    question: 'How long does a project take?',
-    answer: 'Project timelines vary based on complexity and scope. Simple designs take a few days, while full websites or branding projects may take weeks or months for research, design, revisions, and development.'
+    question: 'What makes your websites different from others?',
+    answer: 'Most websites are built to look good. We build them to perform. Every project is structured around speed, SEO foundation, clarity of messaging, and conversion architecture. From layout hierarchy to call-to-action placement, everything is intentional. The goal is simple: turn visitors into inquiries, not just impressions.'
   },
   {
     id: 'q2',
-    question: 'What is your pricing?',
-    answer: 'We offer competitive pricing based on the specific needs of your project. Contact us for a custom quote.'
+    question: 'How do you approach conversion and lead generation?',
+    answer: 'We design with the end goal in mind. Before building, we define the primary action you want users to take. Then we structure content, page flow, and user journeys to guide visitors naturally toward that action. Clear messaging, strategic CTAs, and optimized forms ensure that traffic translates into measurable business outcomes.'
   },
   {
     id: 'q3',
-    question: 'Can I request revisions?',
-    answer: 'Yes, we include a set number of revision rounds in every project to ensure you are 100% satisfied.'
+    question: 'What kind of results can I expect?',
+    answer: 'Results depend on your industry, traffic, and positioning — but you can expect a strong foundation built for growth. You receive a fast-loading, SEO-ready website structured for visibility and lead capture. Combined with consistent marketing efforts, this creates a scalable system designed to generate inquiries and build authority over time.'
   },
   {
     id: 'q4',
-    question: 'How do I start a project with you?',
-    answer: 'Simply click "Book a Call" or "Get Started" and fill out our inquiry form.'
+    question: 'Is SEO included in your website builds?',
+    answer: 'Yes. SEO is integrated from the start. We implement technical best practices including clean structure, proper heading hierarchy, metadata setup, speed optimization, and search-friendly architecture. This ensures your website is discoverable and ready for long-term organic growth.'
   },
   {
     id: 'q5',
-    question: 'Do you offer ongoing support?',
-    answer: 'Absolutely. We offer maintenance and ongoing design support packages for all our clients.'
+    question: 'Do you provide hosting and ongoing support?',
+    answer: 'Yes. We offer managed hosting and maintenance for clients who prefer a complete solution. This includes performance monitoring, updates, security checks, backups, and technical support. The objective is simple: keep your website secure, stable, and consistently performing.'
   }
 ];

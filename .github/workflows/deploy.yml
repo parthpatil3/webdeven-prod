@@ -1,0 +1,45 @@
+name: Deploy Webdeven V2 to Hostinger
+
+on:
+  push:
+    branches:
+      - main # This tells GitHub to ONLY run this script when code hits the 'main' branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Step 1: GitHub downloads your code onto its secure server
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # Step 2: GitHub sets up Node.js (just like on your local computer)
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    # Step 3: Install all your NPM packages
+    - name: Install Dependencies
+      run: npm install
+
+    # Step 4: Run the Production Build (Generates the "dist" folder)
+    - name: Build Application
+      run: npm run build
+      env:
+        # We pass your secrets here so Vite can build them in!
+        VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+        VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+        VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+
+    # Step 5: Transfer the 'dist' folder directly to Hostinger via FTP
+    - name: FTP Deploy to Hostinger
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/ # Uploads everything inside 'dist'
+        server-dir: /public_html/ # Tells Hostinger exactly where to land it
+        danger-action: false # Extra protection to not wipe files randomly

@@ -1,87 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Plus | Turning Visions into Iconic Brands</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#B4FE30',
-              dark: '#050505',
-              'dark-card': '#0c0c0c',
-              'border-gray': 'rgba(255, 255, 255, 0.1)'
-            },
-            fontFamily: {
-              outfit: ['Outfit', 'sans-serif'],
-              inter: ['Inter', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #050505;
-        color: white;
-        font-family: 'Inter', sans-serif;
-      }
-      
-      /* Subtle Cross-Grid Background */
-      .bg-grid {
-        background-image: 
-          radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-        background-size: 40px 40px;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Webdeven builds high-performance, conversion-focused websites designed for growth. Specializing in speed, SEO, and strategic design.">
+  <title>Webdeven | Professional Website Design & Development</title>
+  <link rel="icon" type="image/webp" href="/site-logo.webp">
+  <link rel="preload" as="image" href="/logo.webp">
 
-      .cross-bg {
-        background-image: 
-          linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-        background-size: 100px 100px;
-      }
+  <!-- Google tag (gtag.js) - Placeholder for real tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      .hero-glow {
-        background: radial-gradient(circle at center, rgba(180, 254, 48, 0.15) 0%, transparent 70%);
-      }
-
-      .text-primary { color: #B4FE30; }
-      .bg-primary { background-color: #B4FE30; }
-      .border-primary { border-color: #B4FE30; }
-
-      .card-gradient {
-        background: linear-gradient(180deg, rgba(180, 254, 48, 0.05) 0%, rgba(5, 5, 5, 0) 100%);
-      }
-
-      .geometric-pattern {
-        background-image: radial-gradient(rgba(180, 254, 48, 0.1) 1px, transparent 1px);
-        background-size: 15px 15px;
-      }
-      
-      /* Custom Rounded Corners per prompt (12-16px) */
-      .rounded-custom { border-radius: 14px; }
-      .rounded-pill { border-radius: 9999px; }
-
-      /* Animation for smooth scrolling and hover */
-      .transition-standard { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
+
 <body class="bg-grid">
-    <div id="root"></div>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
