@@ -41,5 +41,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/ # Uploads everything inside 'dist'
-        server-dir: /domains/webdeven.com/public_html/ # Explicitly lands files in the exact Hostinger web root
+        server-dir: ./ # Explicitly lands files in the exact Hostinger web root
         dangerous-clean-slate: false # Extra protection to not wipe files randomly
